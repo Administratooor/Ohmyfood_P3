@@ -1,0 +1,19 @@
+{
+  "name": "package.json",
+  "version": "1.0.0",
+  "description": "Ohmyfood/projet3 -> Openclassrooms",
+  "main": "index.js",
+  "scripts": {
+    "sass" : "sass --watch ./sass/main.scss:./public/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Anthony59170/Ohmyfood_P3.git"
+  },
+  "author": "Clement Anthony",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Anthony59170/Ohmyfood_P3/issues"
+  },
+  "homepage": "https://github.com/Anthony59170/Ohmyfood_P3#readme"
+}

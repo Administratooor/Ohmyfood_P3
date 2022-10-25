@@ -1,0 +1,45 @@
+.form {
+    width: 100%;
+    &__search {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #EAEAEA;
+        @include box-shadow ($shadows);
+        width: 100%;
+        height: 55px;
+            .fa-solid {
+            padding: 0 10px;
+            }
+    }
+    
+    &__city-search {
+        border: none;
+        background-color:transparent;
+        color:$colour-icone;
+        width: 180px;
+            &::placeholder {
+                color:$colour-icone;
+                width: auto;
+            }
+    }
+
+    &__presentation {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: $colour-header_font;
+            h1{
+                margin: 0  auto 15px auto;
+                padding-top: 35px;
+                width: 75%;
+                text-align: center;
+            }
+            p{
+                margin: 0 auto;
+                width: 90%;
+                text-align: center;
+            }
+    }
+}
