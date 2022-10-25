@@ -1,6 +1,4 @@
-/*
-Colour-variables
-*/ 
+
 
 $colour-primary:#9356DC; 
 $colour-secondary:#FF79DA;
@@ -11,13 +9,14 @@ $colour-header_font: #F7F7F7;
 $colour-icone:#353535;
 $colour-white: #fff;
 
-/*
-Shadow
-*/
-$shadows: inset 0px 4px 3px 0px  $colour-shadow;
+$shadow: inset 0px 4px 3px 0px  $colour-shadow;
+$shadow-button : 0px 8px 10px 1px $colour-shadow;
 
-/* 
-font-variables
-*/ 
+$font-weight-800 : 800;
+ 
 $font-primary:"Roboto";
 $font-secondary:"Shrikhand";
+
+
+$border-number : 50%;
+

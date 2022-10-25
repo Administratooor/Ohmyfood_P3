@@ -1,8 +1,40 @@
 button {
-    background: linear-gradient(90deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%);
+    background: linear-gradient(900deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%);
     border: none;
     color: $colour-white;
+    width: 60%;
     padding: 20px;
     margin: 30px auto 50px auto;
     border-radius: 50px;
+    @include box-shadow ($shadow-button);
+    cursor: pointer;
 }
+
+.container__btn{
+    display: flex;
+    width: 75%;
+    background-color: $colour-header_font;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    @include box-shadow ($shadow-button);
+    cursor: pointer;
+
+    &:hover {
+    @include btn-background($colour-primary);
+    }
+
+    :nth-child(1) {
+        position: relative;
+        left: -30px;
+        margin-right: 20px;
+        border-radius: 50%;
+    }
+
+    :nth-child(2) {
+        
+        font-weight: $font-weight-800;
+    }
+}
+
+    

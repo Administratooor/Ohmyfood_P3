@@ -1,61 +1,72 @@
-/*
-Colour-variables
-*/
-/*
-Shadow
-*/
-/* 
-font-variables
-*/
 body {
   margin: 0 auto;
   box-sizing: border-box;
-  width: 100%;
+  max-width: 1400px;
+  font-family: "Roboto";
 }
 
 i {
-  width: 20px;
-  height: 20px;
-}
-
-body {
-  font-family: "Roboto";
+  color: #353535;
 }
 
 input {
-  font-family: "Roboto";
   font-weight: 700;
   font-size: 1.1rem;
 }
 
-h1 {
-  font-family: "Roboto";
-  font-weight: 900;
-  font-size: 2rem;
+h1, h2 {
+  font-weight: 1200;
+  font-size: 1.8rem;
 }
 
-p {
-  font-family: "Roboto";
+p, button {
   font-weight: 300;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
 }
 
 button {
-  background: linear-gradient(90deg, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 100%);
+  background: linear-gradient(900deg, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 100%);
   border: none;
   color: #fff;
+  width: 60%;
   padding: 20px;
   margin: 30px auto 50px auto;
   border-radius: 50px;
+  -webkit-box-shadow: 0px 8px 10px 1px #D1D1D1;
+  -moz-box-shadow: 0px 8px 10px 1px #D1D1D1;
+  box-shadow: 0px 8px 10px 1px #D1D1D1;
+  cursor: pointer;
+}
+
+.container__btn {
+  display: flex;
+  width: 75%;
+  background-color: #F7F7F7;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  -webkit-box-shadow: 0px 8px 10px 1px #D1D1D1;
+  -moz-box-shadow: 0px 8px 10px 1px #D1D1D1;
+  box-shadow: 0px 8px 10px 1px #D1D1D1;
+  cursor: pointer;
+}
+.container__btn:hover {
+  background-color: #f2eafb;
+}
+.container__btn :nth-child(1) {
+  position: relative;
+  left: -30px;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+.container__btn :nth-child(2) {
+  font-weight: 800;
 }
 
 header {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   margin: 20px auto;
-}
-header img {
-  margin: 12px auto;
 }
 
 nav {
@@ -63,8 +74,23 @@ nav {
   flex-direction: column;
 }
 nav .div {
-  display: block;
   margin: 0 auto;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 15px;
+}
+.container__number {
+  background-color: #FF79DA;
+  width: 15px;
+  padding: 5px;
+  display: inline-block;
+}
+.container h2 {
+  margin-left: -30%;
 }
 
 .form {

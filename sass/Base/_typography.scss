@@ -1,21 +1,18 @@
-body {
-    font-family: $font-primary;
-}
 
 input {
-    font-family: $font-primary;
     font-weight: 700;
     font-size: 1.1rem;
 }
 
-h1 {
-    font-family: $font-primary;
-    font-weight: 900;
-    font-size: 2rem;
+h1 ,h2 {
+    font-weight:1200;
+    font-size: 1.8rem;
 }
 
-p {
-    font-family: $font-primary;
+p ,button{
     font-weight:300;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
 }
+
+
+

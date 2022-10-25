@@ -1,11 +1,11 @@
 body {
     margin: 0 auto;
     box-sizing: border-box;
-    width: 100%;
+    max-width: 1400px;
+    font-family: $font-primary;
 }
 
 i {
-    width: 20px;
-    height: 20px;
-    // color: $colour-icone;
+    color: $colour-icone;
 }
+

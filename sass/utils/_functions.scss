@@ -1,0 +1,6 @@
+@mixin btn-background($colour: $colour-primary){
+    @if ( lightness($colour) > 25% ) {
+    $colour: lighten($colour, 35%);
+    }
+    background-color : $colour;
+    }

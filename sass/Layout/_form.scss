@@ -5,7 +5,7 @@
         justify-content: center;
         align-items: center;
         background-color: #EAEAEA;
-        @include box-shadow ($shadows);
+        @include box-shadow ($shadow);
         width: 100%;
         height: 55px;
             .fa-solid {
