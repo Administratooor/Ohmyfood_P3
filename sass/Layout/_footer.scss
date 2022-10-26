@@ -1,0 +1,15 @@
+.footer {
+    background-color:  $colour-icone2;
+    color: $colour-white;
+    display: flex;
+    flex-direction: column;
+    h4 {
+        margin: 10% 0 5% 5%;
+    }
+    &__info{
+    margin: 0 0 5% 5%;
+        p {
+            margin: 4px auto;
+        }
+    }
+}
