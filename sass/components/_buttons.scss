@@ -10,31 +10,42 @@ button {
     cursor: pointer;
 }
 
-.container__btn{
+
+.container{
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    &__btn {
+    display: flex;
+    align-items: baseline;
     width: 75%;
     background-color: $colour-header_font;
-    padding: 20px;
-    margin-bottom: 20px;
     border-radius: 20px;
-    @include box-shadow ($shadow-button);
-    cursor: pointer;
-
-    &:hover {
-    @include btn-background($colour-primary);
-    }
-
-    :nth-child(1) {
-        position: relative;
-        left: -30px;
-        margin-right: 20px;
-        border-radius: 50%;
-    }
-
-    :nth-child(2) {
+    margin-bottom: 20px;
+    padding: 10px;
+        &__number{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color:white;
+            background-color: $colour-primary;
+            border-radius: 50%;
+            font-size: 0.7rem;
+            font-weight: 100;
+            position:relative;
+            margin-left: -20px;
+            margin-right: 5%;
+        }
+        &__iconspace{
+            margin-right: 5%;
+            color: $colour-icone2;
+        }
         
-        font-weight: $font-weight-800;
-    }
-}
+        &:hover{
+        @include btn-background($colour-primary);
+        @include icon-hover;
+        }   
+   }
+   }
 
-    

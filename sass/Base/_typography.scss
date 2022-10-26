@@ -5,13 +5,21 @@ input {
 }
 
 h1 ,h2 {
-    font-weight:1200;
+    font-weight:900;
     font-size: 1.8rem;
+}
+
+h3 {
+    margin-bottom: 1px;
+}
+
+h4 {
+    font-family: $font-secondary;
 }
 
 p ,button{
     font-weight:300;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 

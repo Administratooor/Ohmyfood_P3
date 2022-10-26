@@ -1,16 +1,45 @@
-.container{
+.selection {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 15px;
-    &__number {
-        background-color: $colour-secondary;
-        width: 15px;
-        padding: 5px;
-        display: inline-block;
-    }
-    h2 {
-        margin-left: -30%;
-    }
-
+    background-color: $colour-header_font;
 }
+
+.functioning {
+    width: 100%;
+}
+
+.functioning h2 {
+    margin-left: 35px;
+}
+
+.card {
+    width: 90%;
+    p {
+        margin-top: 4px;
+    }
+    &__menu {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        background-color: $colour-white;
+        border-radius: 20px;
+        margin-bottom: 20px;
+            img {
+            object-fit: cover;
+            width: 100%;
+            height: 200px;
+            border-radius: 20px 20px 0 0;
+        }
+    }
+    &__block{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-right: 10px;
+        padding-left: 10px;
+    }         
+    }
+    
+
