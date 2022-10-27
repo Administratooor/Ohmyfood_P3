@@ -1,15 +1,25 @@
 .footer {
-    background-color:  $colour-icone2;
+    background-color:  $colour-icone;
     color: $colour-white;
     display: flex;
     flex-direction: column;
+    
     h4 {
-        margin: 10% 0 5% 5%;
+        margin: 5% 0 5% 3%;
     }
     &__info{
-    margin: 0 0 5% 5%;
+    margin: 0 0 5% 3%;
         p {
-            margin: 4px auto;
+            margin: 4px 0;
         }
+    }
+    &__icons {
+        display: flex;
+        align-items: center;
+        i {
+            color: $colour-white;
+            margin-right: 5px;
+        }
+            
     }
 }

@@ -17,31 +17,35 @@ button {
     align-items: center;
     width: 100%;
     &__btn {
-    display: flex;
-    align-items: baseline;
-    width: 75%;
-    background-color: $colour-header_font;
-    border-radius: 20px;
-    margin-bottom: 20px;
-    padding: 10px;
-        &__number{
+        display: inherit;
+        align-items: baseline;
+        width: 75%;
+        background-color: $colour-header_font;
+        border-radius: 20px;
+        margin-bottom: 20px;
+        padding: 10px;
+        .fa-solid {
             display: flex;
+            }
+        &__number{
             align-items: center;
             justify-content: center;
             color:white;
             background-color: $colour-primary;
             border-radius: 50%;
+            height: 25px;
+            width: 25px;
             font-size: 0.7rem;
-            font-weight: 100;
-            position:relative;
-            margin-left: -20px;
-            margin-right: 5%;
+            position: relative;
+            left: -20px;
+            right: 5%;
+            
         }
         &__iconspace{
-            margin-right: 5%;
+            font-size: large;
+            margin-right: 3%;
             color: $colour-icone2;
         }
-        
         &:hover{
         @include btn-background($colour-primary);
         @include icon-hover;
