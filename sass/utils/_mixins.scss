@@ -10,18 +10,20 @@
   }
 }
 
-@mixin key-frames-heart {
-  @keyframes key-frames-heart{
-    from{
-      transform: scaleX(0);
-
-  }
-    to {
-      transform: scaleX(1);
-  }
-} 
+@mixin tablette-only {
+  @media screen and (min-width: map-get($breakpoints, tablette)){
+      @content;
+}
 }
 
-@mixin iconsolid {
-  background-image :url("./images/icon/heart-regular") ;
-}
+// @mixin key-frames-heart {
+//   @keyframes key-frames-heart{
+//     from{
+//       transform: scaleX(0);
+
+//   }
+//     to {
+//       transform: scaleX(1);
+//   }
+// } 
+// }

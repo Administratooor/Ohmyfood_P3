@@ -4,14 +4,28 @@
 
 .functioning h2 {
     margin-left: 6%;
+    @include tablette-only {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 50px;
+        margin-left: 0;
+    }
 }
 
 .restaurant{
     background-color: $colour-header_font;
+    @include tablette-only {
+        width: 100%;
+        margin: 0 auto;
+    }
     h2{
-        width: 80%;
         margin-left: 6%;
         padding-top: 50px;
+        @include tablette-only {
+            display: flex;
+            justify-content: center;
+            margin-left: 0;
+        }
     }
 }
 
@@ -22,6 +36,9 @@
     align-items: center;
     &__card {
         width: 90%;
+        @include tablette-only {
+            width: 60%;
+        }
     }
     &__menu {
         img {
