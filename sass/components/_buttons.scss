@@ -8,6 +8,10 @@ button {
     border-radius: 50px;
     @include box-shadow ($shadow-button);
     cursor: pointer;
+    transition: 200ms ease;
+    &:hover {
+        @include box-shadow($shadow-button-darken);
+    }
 }
 
 
@@ -19,11 +23,13 @@ button {
     &__btn {
         display: inherit;
         align-items: baseline;
-        width: 75%;
-        background-color: $colour-header_font;
+        width: 80%;
         border-radius: 20px;
         margin-bottom: 20px;
         padding: 10px;
+        background-color: $colour-header_font;
+        box-shadow: $shadow-button;
+        transition: 300ms ease;
         .fa-solid {
             display: flex;
             }
@@ -49,6 +55,7 @@ button {
         &:hover{
         @include btn-background($colour-primary);
         @include icon-hover;
+        @include box-shadow($shadow-button-darken);
         }   
    }
    }

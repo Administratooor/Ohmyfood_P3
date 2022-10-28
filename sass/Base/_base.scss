@@ -5,10 +5,19 @@ body {
     font-family: $font-primary;
 }
 
+section {
+    padding-bottom:50px ;
+}
+
 i {
     color: $colour-icone;
     width: 20px;
     height: 20px;
+}
+
+a {
+    text-decoration: none;
+    color:  $coulour-black;
 }
 
 .fa-heart {

@@ -5,12 +5,16 @@
     flex-direction: column;
     
     h4 {
-        margin: 5% 0 5% 3%;
+        margin: 5% 0 5% 8%;
     }
     &__info{
-    margin: 0 0 5% 3%;
+    margin: 0 0 5% 8%;
         p {
             margin: 4px 0;
+        }
+
+        a {
+            color: $colour-white;
         }
     }
     &__icons {
