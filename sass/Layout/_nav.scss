@@ -4,4 +4,10 @@ nav {
         .div {
             margin: 0 auto;
         }
+        a {
+            position: absolute;
+            left: 20px;
+            top: 25px;
+            -webkit-text-stroke: 2px;
+        }
 }
