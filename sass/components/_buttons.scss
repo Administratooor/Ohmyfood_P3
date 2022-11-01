@@ -34,7 +34,7 @@ button {
     &__btn {
         display: inherit;
         align-items: baseline;
-        width: 88%;
+        width: 84%;
         border-radius: 20px;
         margin-bottom: 20px;
         padding: 10px;
@@ -108,7 +108,7 @@ button {
                     }
                     h3 {
                         font-size: larger;
-                        margin: 0;
+                        margin: 0; 
                         overflow: hidden;
                         text-overflow: ellipsis;
                         white-space: nowrap;
@@ -116,12 +116,19 @@ button {
             }
             &__price {
                 margin-right: 15px;
+                &:hover {
+                    height: 100%;
+                    background-color: $colour-tertiary;
+                }
                 
             }
             &__price p{
                 margin:0 0 0 0;
                 font-weight: bolder;
                 text-overflow:inherit;
+                &:hover {
+                    background-color: $colour-tertiary;
+                }
             }  
             }
             
