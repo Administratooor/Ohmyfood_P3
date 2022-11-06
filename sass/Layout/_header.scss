@@ -6,7 +6,17 @@ header{
 }
 // Page de menu
 
-.header-menu {
-    margin-bottom: 0;
-}
+.header-menu{
+    &__img {
+        object-fit: cover;
+        width: 100%;
+        @include tablette-only {
+            height: 300px;
+        }
+        @include desktop-only {
+            width :100%;
+            height: 450px;
+        }
+    }
 
+}

@@ -1,5 +1,4 @@
 
-
 $colour-primary:#9356DC; 
 $colour-secondary:#FF79DA;
 $colour-tertiary:#99E2D0;
@@ -23,4 +22,8 @@ $font-secondary:"Shrikhand";
 
 $breakpoints: (
     tablette: 764px
+);
+
+$breakpoints-desktop: (
+    desktop: 992px
 );

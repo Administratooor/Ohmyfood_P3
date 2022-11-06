@@ -6,6 +6,9 @@
     
     h4 {
         margin: 5% 0 5% 8%;
+        @include desktop-only{
+        margin: 5% 0 2% 8%;
+        }
     }
     &__info{
     margin: 0 0 5% 8%;

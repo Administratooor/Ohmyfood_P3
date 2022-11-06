@@ -12,6 +12,9 @@ button {
     @include tablette-only {
         width: 40%;
     }
+    @include desktop-only {
+        width: 30%;
+    }
     &:hover {
         @include box-shadow($shadow-button-darken);
         opacity: 0.9;
@@ -40,7 +43,6 @@ button {
         padding: 10px;
         background-color: $colour-header_font;
         box-shadow: $shadow-button;
-        transition: 300ms ease;
         .fa-solid {
             display: flex;
             }
@@ -53,6 +55,39 @@ button {
                 width: 100%;
             }
         }
+       
+        
+        .fa-solid {
+            display: flex;
+            }
+        @include tablette-only {
+            width: 25%;
+            margin: 0 auto;
+            p{
+                font-size: smaller;
+                font-weight: bolder;
+                width: 100%;
+            }
+        }
+        &__menu {
+            display: inherit;
+            align-items: baseline;
+            width:84%;
+            border-radius: 20px;
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: $colour-header_font;
+            box-shadow: $shadow-button;
+        @include desktop-only {
+            display: flex;
+            width: 26%;
+            margin: 0 auto;
+            margin-bottom: 20px;
+            transition: 1s; 
+            }
+
+
+        } 
         &__number{
             align-items: center;
             justify-content: center;
@@ -84,18 +119,30 @@ button {
         @include box-shadow($shadow-button-darken);
         }   
     }
-}   .container-page-menu{
+}       
+
+.container-page-menu{
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 100%;
-
+        @include desktop-only{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
         &__text{
             width: 100%;
             display: flex;
             justify-content: space-between;
             align-items: flex-end;
             margin-right: 0;
+            @include desktop-only {
+                width: 100%;
+                display: flex;
+                justify-content: flex-start;
+                flex-wrap: wrap;
+            }
                 &__list{
                     width: 90%;
                     p{
@@ -103,8 +150,10 @@ button {
                     overflow: hidden;
                     text-overflow: ellipsis;
                     white-space: nowrap;
-                    // resize: horizontal;  
                     margin: 5px 0 5px 0;
+                    @include desktop-only {
+                        width: 100%;
+                    }
                     }
                     h3 {
                         font-size: larger;
@@ -131,28 +180,4 @@ button {
                 }
             }  
             }
-            
-
-            
 }
-       
-
-        /* Page menu*/
-
-        //     h3 {
-        //         font-size: 1.2rem;
-        //     }
-        //     p{
-        //         font-size: 1rem;
-        //     }
-        // }
-        // &__menu-price {
-        //     width: 100%;
-        //     display: flex;
-        //     justify-content: space-between;
-        //     &:nth-child(2) {
-        //         margin-right: 10%;
-        //     }
-            
-        // }
-        

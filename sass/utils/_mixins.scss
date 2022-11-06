@@ -16,6 +16,12 @@
 }
 }
 
+@mixin desktop-only {
+  @media screen and (min-width: map-get($breakpoints-desktop,desktop )){
+      @content;
+}
+}
+
 // @mixin key-frames-heart {
 //   @keyframes key-frames-heart{
 //     from{

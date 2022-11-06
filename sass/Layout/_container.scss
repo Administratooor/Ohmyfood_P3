@@ -1,27 +1,42 @@
 .functioning {
     width: 100%;
-}
-
-.functioning {
     padding: 30px 0;
     background-color: $colour-white;
     h2 {
         margin-left: 6%;
+        @include tablette-only {
+        display: flex;
+        justify-content: center; 
+        margin-bottom: 50px;
+        margin-left: 0%;
+        }
     }
 }
 
-.proposition h2 {
+article {
+    margin: 140px 0;
+}
+
+.proposition {
+    h2 {
     margin-left: 6%;
     margin-bottom: 20px ;
+    margin-top: 50px;
     font-size: larger;
     font-weight: 500;
     border-bottom: 2px solid $colour-tertiary;
     width: 10%;
     @include tablette-only {
+        margin: 10px auto;
+        padding: 5px;
+        width: 10%;
+        }
+    @include desktop-only {
+        margin-bottom: 50px;
         display: flex;
         justify-content: center;
-        margin-bottom: 30px;
-        margin-left: 0;
+        border: 3px solid $colour-tertiary;
+        } 
     }
 }
 
@@ -105,13 +120,6 @@
 
 // Page-menu
 
-.header-menu{
-    &__img {
-        object-fit: cover;
-        width: 100%;
-    }
-}
-
 .presentation-menu {
     background: $colour-header_font;
     border-radius: 20px 20px 0 0;
@@ -127,6 +135,16 @@
         background: $colour-header_font;
         width: 100%;
         border-radius: 35px 35px 0 0;
+        @include desktop-only{
+            width: 50%;
+            left: 25%;
+            top: -58px;
+            flex-direction: column;
+            align-items: center;
+            border-top: 11px solid #99E2D0;
+            border-left: 4px solid #99E2D0;
+            border-right: 4px solid #99E2D0;
+        }
         h1 {
             margin-top: 0;
             padding-top: 30px ;
@@ -136,6 +154,9 @@
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
+            @include desktop-only {
+                padding-top: 5px;
+            }
         }
     }
 }
