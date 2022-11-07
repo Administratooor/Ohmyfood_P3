@@ -15,7 +15,13 @@
 
 article {
     margin: 140px 0;
+    @include desktop-only {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
 }
+
 
 .proposition {
     h2 {
@@ -27,15 +33,18 @@ article {
     border-bottom: 2px solid $colour-tertiary;
     width: 10%;
     @include tablette-only {
-        margin: 10px auto;
+        margin: 10px 40%;
         padding: 5px;
         width: 10%;
         }
     @include desktop-only {
         margin-bottom: 50px;
+        font-size: 26px;
+        font-family: "Shrikhand";
+        width: 25%;
         display: flex;
         justify-content: center;
-        border: 3px solid $colour-tertiary;
+        border-bottom: 2px solid #545454;
         } 
     }
 }
@@ -67,6 +76,12 @@ article {
         @include tablette-only {
             width: 60%;
         }
+        @include tablette-only {
+            max-height: 1920px;
+        }
+    }
+    &__card__global {
+        margin: 40px 0;
     }
     &__menu {
         width: 100%;
@@ -75,6 +90,7 @@ article {
         background-color: $colour-white;
         border-radius: 20px;
         margin-bottom: 20px;
+        box-shadow: 0px 8px 10px 1px #d1d1d1;
         &__img {
             position: relative;
             &__text-hover {
@@ -136,14 +152,15 @@ article {
         width: 100%;
         border-radius: 35px 35px 0 0;
         @include desktop-only{
-            width: 50%;
-            left: 25%;
-            top: -58px;
-            flex-direction: column;
-            align-items: center;
-            border-top: 11px solid #99E2D0;
-            border-left: 4px solid #99E2D0;
-            border-right: 4px solid #99E2D0;
+        align-items: baseline;
+        justify-content: space-evenly;
+        border-top: none;
+        width: 55%;
+        left: 25%;
+        top: -840px;
+        height: 450px;
+        background: none;
+        border-radius: 0;
         }
         h1 {
             margin-top: 0;
@@ -155,7 +172,9 @@ article {
             text-overflow: ellipsis;
             white-space: nowrap;
             @include desktop-only {
-                padding-top: 5px;
+                position: relative;
+                color: $colour-white;
+                font-size:70px;
             }
         }
     }

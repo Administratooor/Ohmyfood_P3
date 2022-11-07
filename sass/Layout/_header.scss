@@ -7,6 +7,11 @@ header{
 // Page de menu
 
 .header-menu{
+    &__text {
+        @include desktop-only {
+            color: $colour-white;
+        }
+    }
     &__img {
         object-fit: cover;
         width: 100%;
@@ -14,9 +19,8 @@ header{
             height: 300px;
         }
         @include desktop-only {
-            width :100%;
-            height: 450px;
+            width: 100%;
+            height: 100vh;
+        }
         }
     }
-
-}

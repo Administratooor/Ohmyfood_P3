@@ -13,7 +13,7 @@ button {
         width: 40%;
     }
     @include desktop-only {
-        width: 30%;
+        width: 20%;
     }
     &:hover {
         @include box-shadow($shadow-button-darken);
@@ -128,8 +128,7 @@ button {
         width: 100%;
         @include desktop-only{
             display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
+            flex-direction: column;
         }
         &__text{
             width: 100%;
