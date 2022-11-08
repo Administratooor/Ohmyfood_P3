@@ -290,6 +290,7 @@ header {
   }
 }
 
+/* Page-loading */
 .load {
   z-index: 1;
   position: fixed;
@@ -308,6 +309,7 @@ header {
   justify-content: center;
   height: 100vh;
   width: 100%;
+  /*--- Pan-cooking --*/
 }
 .load__box p {
   position: relative;
@@ -326,7 +328,7 @@ header {
   border-radius: 3px;
   top: 40px;
   background-color: #99E2D0;
-  animation: 2000ms cubic-bezier(0, 0.94, 0.52, 0.98) alternate infinite line-move3;
+  animation: 2000ms cubic-bezier(0, 0.94, 0.52, 0.98) alternate infinite line-move;
 }
 .load__box__line2 {
   position: relative;
@@ -336,7 +338,7 @@ header {
   border-radius: 2px 2px 0 0;
   background-color: #99E2D0;
   border: 2px black solid;
-  animation: 2000ms cubic-bezier(0, 0.94, 0.52, 0.98) alternate infinite line-move3;
+  animation: 2000ms cubic-bezier(0, 0.94, 0.52, 0.98) alternate infinite line-move;
 }
 .load__box__line3 {
   z-index: 10;
@@ -350,15 +352,16 @@ header {
   box-shadow: 0px 4px 11px 0px rgba(241, 192, 227, 0.8509803922);
 }
 
-.buble {
+/* Flames */
+.flame {
   position: relative;
   margin-bottom: 2px;
   width: 5px;
   height: 6px;
   border-radius: 20px 20px 30px 30px;
-  animation: 12ms 200ms ease infinite alternate buble;
+  animation: 12ms 200ms ease infinite alternate flame;
 }
-.buble__buble {
+.flame__flame {
   position: relative;
   top: -14px;
   width: 6px;
@@ -366,7 +369,7 @@ header {
   border-radius: 43px 2px 50px 0px;
   background-color: #9356DC;
 }
-.buble__buble1 {
+.flame__flame1 {
   position: relative;
   margin-bottom: 2px;
   width: 6px;
@@ -376,7 +379,7 @@ header {
   border-radius: 43px 2px 50px 0px;
   background-color: #99E2D0;
 }
-.buble__buble2 {
+.flame__flame2 {
   position: relative;
   margin-bottom: 2px;
   width: 6px;
@@ -387,6 +390,7 @@ header {
   background-color: #FF79DA;
 }
 
+/* Text load */
 @keyframes wait {
   0% {
     transform: translate(2px, -15px);
@@ -395,7 +399,24 @@ header {
     transform: translateY(1px);
   }
 }
-@keyframes buble {
+@keyframes line-move {
+  0% {
+    transform: rotate(-1deg);
+  }
+  10% {
+    transform: rotate(2deg);
+  }
+  20% {
+    transform: rotate(-2deg);
+  }
+  30% {
+    transform: rotate(2deg);
+  }
+  100% {
+    transform: translateY(-150px);
+  }
+}
+@keyframes flame {
   0% {
     transform: rotate(-1deg);
   }
@@ -421,38 +442,61 @@ header {
     transform: rotate(1deg);
   }
 }
-@keyframes line-move2 {
-  0% {
-    transform: rotate(-1deg);
-  }
-  10% {
-    transform: rotate(2deg);
-  }
-  100% {
-    transform: translateY(-2px);
-  }
-}
-@keyframes line-move3 {
-  0% {
-    transform: rotate(-1deg);
-  }
-  10% {
-    transform: rotate(2deg);
-  }
-  20% {
-    transform: rotate(-2deg);
-  }
-  30% {
-    transform: rotate(2deg);
-  }
-  100% {
-    transform: translateY(-150px);
-  }
-}
+/* --Delete loading--*/
 @keyframes delete {
   to {
     opacity: 0;
     transform: scale(0);
+  }
+}
+/* heart filling */
+.selection__block__heart {
+  position: relative;
+}
+.selection__block__heart .fa {
+  position: absolute;
+  color: #474645;
+}
+.selection__block__heart .fa::before:hover::before {
+  opacity: 0;
+  color: transparent;
+  z-index: -1;
+}
+.selection__block__heart .fa-1 {
+  position: relative;
+  top: -1px;
+  transition: all 0.2s;
+  left: -2px;
+}
+.selection__block__heart .fa-1::before {
+  color: transparent;
+  width: 110%;
+  height: 0%;
+  font-size: 31px;
+}
+.selection__block__heart .fa-1:hover::before {
+  height: 110%;
+  animation: 1000ms progress-bar linear both;
+}
+
+@keyframes progress-bar {
+  0% {
+    -webkit-background-clip: text;
+    color: white;
+    transform: scale(0);
+  }
+  50% {
+    -webkit-background-clip: text;
+    color: transparent;
+    background-color: #FF79DA;
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  100% {
+    -webkit-background-clip: text;
+    color: transparent;
+    background-color: #9356DC;
+    transform: scale(1.5);
   }
 }
 /*------- appear -------*/
@@ -634,7 +678,7 @@ article {
   justify-content: space-between;
   margin-right: 40px;
   position: absolute;
-  top: -80px;
+  top: -32px;
   background: #F7F7F7;
   width: 100%;
   border-radius: 35px 35px 0 0;
@@ -646,7 +690,7 @@ article {
     border-top: none;
     width: 55%;
     left: 25%;
-    top: -240px;
+    top: -30px;
     height: 450px;
     background: none;
     border-radius: 0;
@@ -665,7 +709,7 @@ article {
 @media screen and (min-width: 992px) {
   .presentation-menu__title h1 {
     position: relative;
-    color: #fff;
+    color: rgb(0, 0, 0);
     font-size: 70px;
   }
 }
