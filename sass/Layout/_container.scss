@@ -147,7 +147,7 @@ article {
         justify-content: space-between;
         margin-right: 40px;
         position: absolute;
-        top: -80px;
+        top: -32px;
         background: $colour-header_font;
         width: 100%;
         border-radius: 35px 35px 0 0;
@@ -157,7 +157,7 @@ article {
         border-top: none;
         width: 55%;
         left: 25%;
-        top: -240px;
+        top: -30px;
         height: 450px;
         background: none;
         border-radius: 0;
@@ -173,7 +173,7 @@ article {
             white-space: nowrap;
             @include desktop-only {
                 position: relative;
-                color: $colour-white;
+                color: $coulour-black;
                 font-size:70px;
             }
         }
