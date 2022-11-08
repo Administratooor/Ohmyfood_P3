@@ -157,7 +157,7 @@ article {
         border-top: none;
         width: 55%;
         left: 25%;
-        top: -240px;
+        top: -30px;
         height: 450px;
         background: none;
         border-radius: 0;
@@ -173,8 +173,8 @@ article {
             white-space: nowrap;
             @include desktop-only {
                 position: relative;
-                color: $colour-white;
-                font-size:70px;
+                color: $coulour-black;
+                font-size:50px;
             }
         }
     }
