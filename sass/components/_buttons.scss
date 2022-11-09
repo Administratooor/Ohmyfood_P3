@@ -1,11 +1,10 @@
 button {
-    
-    border: none;
-    color: $colour-white;
     width: 60%;
     padding: 20px;
     margin: 30px auto 50px auto;
+    border: none;
     border-radius: 50px;
+    color: $colour-white;
     background: linear-gradient(900deg, $colour-secondary 0%, $colour-primary 100%);
     @include box-shadow ($shadow-button);
     cursor: pointer;
@@ -25,7 +24,7 @@ button {
     }
 }
 
-
+/* -- button fonctionnement -- */
 .container{
     display: flex;
     flex-direction: column;
@@ -35,6 +34,7 @@ button {
         flex-direction: row;
         width: 100%;
     }
+    /* -- button fonctionnement -- */ 
     &__btn {
         display: inherit;
         align-items: baseline;
@@ -56,39 +56,7 @@ button {
                 width: 100%;
             }
         }
-       
-        
-        .fa-solid {
-            display: flex;
-            }
-        @include tablette-only {
-            width: 25%;
-            margin: 0 auto;
-            p{
-                font-size: smaller;
-                font-weight: bolder;
-                width: 100%;
-            }
-        }
-        &__menu {
-            display: inherit;
-            align-items: baseline;
-            width:84%;
-            border-radius: 20px;
-            margin-bottom: 30px;
-            padding: 10px;
-            background-color: $colour-header_font;
-            box-shadow: $shadow-button;
-        @include desktop-only {
-            display: flex;
-            width:40%;
-            margin: 0 auto;
-            margin-bottom: 20px;
-            transition: 1s; 
-            }
-
-
-        } 
+        /* -- circle number -- */
         &__number{
             align-items: center;
             justify-content: center;
@@ -106,75 +74,102 @@ button {
                 left: 45%;
             }
         }
+        /* -- icon container-btn --*/ 
         &__iconspace{
-            font-size: large;
             margin-right: 3%;
             color: $colour-icone2;
+            font-size: large;
             @include tablette-only {
                 margin-left: -15px;
             }
         }
+        /* -- Hover container-btn -- */
         &:hover{
         @include btn-background($colour-primary);
         @include icon-hover;
         @include box-shadow($shadow-button-darken);
+        } 
+
+        /*-- button page menu --*/
+        &__menu {
+            display: inherit;
+            align-items: baseline;
+            width:84%;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            padding: 10px;
+            background-color: $colour-header_font;
+            box-shadow: $shadow-button;
+            cursor: pointer;
+            &:hover {
+                animation-delay: 2s;
+                transform: scale(1.02);
+            }
+        @include desktop-only {
+            width:40%;
+            margin: 0 auto;
+            margin-bottom: 20px;
+            transition: 1s; 
+            }
         }   
     }
 }       
 
+
+/* -- container entrée, plats , desserts -- */ 
 .container-page-menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    @include desktop-only{
         display: flex;
         flex-direction: column;
-        align-items: center;
+    }
+    &__text{
         width: 100%;
-        @include desktop-only{
-            display: flex;
-            flex-direction: column;
-        }
-        &__text{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-right: 0;
+        @include desktop-only {
             width: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-            margin-right: 0;
-            @include desktop-only {
-                width: 100%;
-            }
-                &__list{
-                    width: 90%;
-                    p{
-                    width: 90%;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                    white-space: nowrap;
-                    margin: 5px 0 5px 0;
-                    @include desktop-only {
-                        width: 100%;
-                    }
-                    }
-                    h3 {
-                        font-size: larger;
-                        margin: 0; 
-                        overflow: hidden;
-                        text-overflow: ellipsis;
-                        white-space: nowrap;
-                    }
-            }
-            &__price {
-                margin-right: 15px;
-                &:hover {
-                    height: 100%;
-                    background-color: $colour-tertiary;
+        }
+        &__list{
+            width: 90%;
+            p{
+                width: 90%;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                margin: 5px 0 5px 0;
+                @include desktop-only {
+                    width: 100%;
                 }
+            }
+            h3 {
+                font-size: larger;
+                margin: 0; 
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+        }
+        &__price {
+            margin-right: 15px;
+            &:hover {
+                height: 100%;
+                background-color: $colour-tertiary;
+            }
                 
+        }
+        &__price p{
+            margin:0 0 0 0;
+            font-weight: bolder;
+            text-overflow:inherit;
+            &:hover {
+                background-color: $colour-tertiary;
             }
-            &__price p{
-                margin:0 0 0 0;
-                font-weight: bolder;
-                text-overflow:inherit;
-                &:hover {
-                    background-color: $colour-tertiary;
-                }
-            }  
-            }
+        }  
+    }
 }

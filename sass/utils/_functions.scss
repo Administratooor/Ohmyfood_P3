@@ -3,14 +3,16 @@
     $colour: lighten($colour, 35%);
     }
     background-color : $colour;
-    }
+}
 
 
 @mixin box-shadow($params) {
     -webkit-box-shadow: $params;
     -moz-box-shadow: $params;
     box-shadow: $params;
-    }
+}
+
+/* -- loop container btn menu --*/ 
 
 @for $i from 1 through 3 {
     .container__btn__menu:nth-child(#{+$i}) {

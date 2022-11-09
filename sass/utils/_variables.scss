@@ -22,11 +22,10 @@ $font-secondary:"Shrikhand";
 $animation-delay:null;
 $animation:400ms linear offset both;
 
-
+/*-- breakpoints -- */ 
 $breakpoints: (
     tablette: 764px
 );
-
 $breakpoints-desktop: (
     desktop: 992px
 );

@@ -1,3 +1,6 @@
+@charset "UTF-8";
+/*-- breakpoints -- */
+/* -- loop container btn menu --*/
 .container__btn__menu:nth-child(1) {
   animation: 400ms linear offset both;
   animation-delay: 250ms;
@@ -72,12 +75,12 @@ p, button {
 }
 
 button {
-  border: none;
-  color: #fff;
   width: 60%;
   padding: 20px;
   margin: 30px auto 50px auto;
+  border: none;
   border-radius: 50px;
+  color: #fff;
   background: linear-gradient(900deg, #FF79DA 0%, #9356DC 100%);
   -webkit-box-shadow: 0px 8px 10px 1px #D1D1D1;
   -moz-box-shadow: 0px 8px 10px 1px #D1D1D1;
@@ -105,11 +108,13 @@ button span:hover {
   opacity: 1;
 }
 
+/* -- button fonctionnement -- */
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
+  /* -- button fonctionnement -- */
 }
 @media screen and (min-width: 764px) {
   .container {
@@ -126,6 +131,10 @@ button span:hover {
   padding: 10px;
   background-color: #F7F7F7;
   box-shadow: 0px 8px 10px 1px #D1D1D1;
+  /* -- circle number -- */
+  /* -- icon container-btn --*/
+  /* -- Hover container-btn -- */
+  /*-- button page menu --*/
 }
 .container__btn .fa-solid {
   display: flex;
@@ -139,39 +148,6 @@ button span:hover {
     font-size: smaller;
     font-weight: bolder;
     width: 100%;
-  }
-}
-.container__btn .fa-solid {
-  display: flex;
-}
-@media screen and (min-width: 764px) {
-  .container__btn {
-    width: 25%;
-    margin: 0 auto;
-  }
-  .container__btn p {
-    font-size: smaller;
-    font-weight: bolder;
-    width: 100%;
-  }
-}
-.container__btn__menu {
-  display: inherit;
-  align-items: baseline;
-  width: 84%;
-  border-radius: 20px;
-  margin-bottom: 30px;
-  padding: 10px;
-  background-color: #F7F7F7;
-  box-shadow: 0px 8px 10px 1px #D1D1D1;
-}
-@media screen and (min-width: 992px) {
-  .container__btn__menu {
-    display: flex;
-    width: 40%;
-    margin: 0 auto;
-    margin-bottom: 20px;
-    transition: 1s;
   }
 }
 .container__btn__number {
@@ -194,9 +170,9 @@ button span:hover {
   }
 }
 .container__btn__iconspace {
-  font-size: large;
   margin-right: 3%;
   color: #636363;
+  font-size: large;
 }
 @media screen and (min-width: 764px) {
   .container__btn__iconspace {
@@ -212,7 +188,31 @@ button span:hover {
 .container__btn:hover .container__btn__iconspace {
   color: #9356DC;
 }
+.container__btn__menu {
+  display: inherit;
+  align-items: baseline;
+  width: 84%;
+  border-radius: 20px;
+  margin-bottom: 30px;
+  padding: 10px;
+  background-color: #F7F7F7;
+  box-shadow: 0px 8px 10px 1px #D1D1D1;
+  cursor: pointer;
+}
+.container__btn__menu:hover {
+  animation-delay: 2s;
+  transform: scale(1.02);
+}
+@media screen and (min-width: 992px) {
+  .container__btn__menu {
+    width: 40%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    transition: 1s;
+  }
+}
 
+/* -- container entrée, plats , desserts -- */
 .container-page-menu {
   display: flex;
   flex-direction: column;
@@ -281,6 +281,7 @@ header {
   margin: 20px auto;
 }
 
+/* -- header page menu -- */
 @media screen and (min-width: 992px) {
   .header-menu__text {
     color: #fff;
@@ -311,7 +312,7 @@ header {
   height: 100vh;
   background: rgb(0, 0, 0);
   opacity: 0.95;
-  animation: delete cubic-bezier(0, 1, 0, 1) 0s 5s forwards;
+  animation: 0s 3s cubic-bezier(0, 1, 0, 1) delete forwards;
 }
 .load__box {
   color: white;
@@ -332,7 +333,7 @@ header {
   top: -95px;
   font-size: 20px;
   letter-spacing: 3px;
-  animation: 2000ms cubic-bezier(0, 0.94, 0.52, 0.98) alternate infinite wait;
+  animation: 1200ms cubic-bezier(0, 0.94, 0.52, 0.98) alternate infinite wait;
 }
 .load__box__line1 {
   position: relative;
@@ -341,7 +342,7 @@ header {
   border-radius: 3px;
   top: 40px;
   background-color: #99E2D0;
-  animation: 2000ms cubic-bezier(0, 0.94, 0.52, 0.98) alternate infinite line-move;
+  animation: 1200ms cubic-bezier(0, 0.94, 0.52, 0.98) alternate infinite line-move;
 }
 .load__box__line2 {
   position: relative;
@@ -351,7 +352,7 @@ header {
   border-radius: 2px 2px 0 0;
   background-color: #99E2D0;
   border: 2px black solid;
-  animation: 2000ms cubic-bezier(0, 0.94, 0.52, 0.98) alternate infinite line-move;
+  animation: 1200ms cubic-bezier(0, 0.94, 0.52, 0.98) alternate infinite line-move;
 }
 .load__box__line3 {
   z-index: 10;
@@ -379,7 +380,7 @@ header {
   width: 5px;
   height: 6px;
   border-radius: 20px 20px 30px 30px;
-  animation: 12ms 200ms ease infinite alternate flame;
+  animation: 12ms ease infinite alternate flame;
 }
 .flame__flame {
   position: relative;
@@ -412,10 +413,10 @@ header {
 
 /* Text load */
 @keyframes wait {
-  0% {
+  to {
     transform: translate(2px, -15px);
   }
-  100% {
+  from {
     transform: translateY(1px);
   }
 }
@@ -530,6 +531,7 @@ header {
 nav {
   display: flex;
   flex-direction: column;
+  /* -- Page Menu -- */
 }
 nav .div {
   margin: 0 auto;
@@ -575,33 +577,34 @@ article {
 }
 
 .proposition h2 {
+  width: 10%;
   margin-left: 6%;
   margin-bottom: 20px;
   margin-top: 50px;
   font-size: larger;
   font-weight: 500;
   border-bottom: 2px solid #99E2D0;
-  width: 10%;
 }
 @media screen and (min-width: 764px) {
   .proposition h2 {
+    width: 10%;
     margin: 10px 40%;
     padding: 5px;
-    width: 10%;
   }
 }
 @media screen and (min-width: 992px) {
   .proposition h2 {
-    margin-bottom: 50px;
-    font-size: 26px;
-    font-family: "Shrikhand";
-    width: 25%;
     display: flex;
     justify-content: center;
+    width: 25%;
+    margin-bottom: 50px;
+    font-family: "Shrikhand";
+    font-size: 26px;
     border-bottom: 3px solid #99E2D0;
   }
 }
 
+/* -- block restaurants -- */
 .restaurant {
   background-color: #F7F7F7;
 }
@@ -623,11 +626,13 @@ article {
   }
 }
 
+/* -- block Card restaurants -- */
 .selection {
-  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+  /* -- card détails -- */
 }
 .selection__card {
   width: 90%;
@@ -637,9 +642,9 @@ article {
     width: 60%;
   }
 }
-@media screen and (min-width: 764px) {
+@media screen and (min-width: 992px) {
   .selection__card {
-    max-height: 1920px;
+    max-width: 800px;
   }
 }
 .selection__card__global {
@@ -653,21 +658,28 @@ article {
   border-radius: 20px;
   margin-bottom: 20px;
   box-shadow: 0px 8px 10px 1px #d1d1d1;
+  /* -- block text restaurants-- */
+}
+.selection__menu img {
+  object-fit: cover;
+  width: 100%;
+  height: 230px;
+  border-radius: 20px 20px 0 0;
 }
 .selection__menu__img {
   position: relative;
 }
 .selection__menu__img__text-hover {
   position: absolute;
-  right: 10px;
-  top: 5%;
-  background-color: #99E2D0;
-  padding: 10px;
-  border-radius: 5px;
   width: 80px;
   height: 20px;
-  color: white;
+  right: 10px;
+  top: 5%;
+  padding: 10px;
   text-align: center;
+  border-radius: 5px;
+  background-color: #99E2D0;
+  color: white;
 }
 .selection__menu__block {
   display: flex;
@@ -687,27 +699,21 @@ article {
 .selection__menu__block__body p {
   margin: 0 0 8px 0;
 }
-.selection__menu img {
-  object-fit: cover;
-  width: 100%;
-  height: 230px;
-  border-radius: 20px 20px 0 0;
-}
 
 .presentation-menu {
+  position: relative;
   background: #F7F7F7;
   border-radius: 20px 20px 0 0;
-  position: relative;
 }
 .presentation-menu__title {
   display: flex;
-  align-items: baseline;
   justify-content: space-between;
-  margin-right: 40px;
+  align-items: center;
   position: absolute;
-  top: -32px;
-  background: #F7F7F7;
   width: 100%;
+  top: -50px;
+  margin-right: 40px;
+  background: #F7F7F7;
   border-radius: 35px 35px 0 0;
 }
 @media screen and (min-width: 992px) {
@@ -717,18 +723,16 @@ article {
     border-top: none;
     width: 55%;
     left: 25%;
-    top: -30px;
-    height: 450px;
     background: none;
     border-radius: 0;
   }
 }
 .presentation-menu__title h1 {
   margin-top: 0;
+  margin-left: 5%;
   padding-top: 30px;
   font-family: "Shrikhand";
   font-weight: 100;
-  margin-left: 5%;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -742,7 +746,8 @@ article {
 }
 
 .form {
-  width: 100%;
+  /* -- search area -- */
+  /* -- presentation area position > include button*/
 }
 .form__search {
   display: flex;
@@ -776,9 +781,9 @@ article {
   background-color: #F7F7F7;
 }
 .form__presentation h1 {
+  width: 75%;
   margin: 0 auto 15px auto;
   padding-top: 35px;
-  width: 75%;
   text-align: center;
 }
 .form__presentation p {
@@ -792,6 +797,7 @@ article {
   color: #fff;
   display: flex;
   flex-direction: column;
+  /* -- icon footer -- */
 }
 .footer h4 {
   margin: 5% 0 5% 8%;
@@ -819,6 +825,7 @@ article {
   margin-right: 5px;
 }
 
+/*-- footer menu ajusted position top -- */
 .footer-menu {
   top: -60px;
 }

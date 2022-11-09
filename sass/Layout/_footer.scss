@@ -6,20 +6,23 @@
     
     h4 {
         margin: 5% 0 5% 8%;
+
         @include desktop-only{
-        margin: 5% 0 2% 8%;
+            margin: 5% 0 2% 8%;
         }
     }
+
     &__info{
-    margin: 0 0 5% 8%;
-        p {
+        margin: 0 0 5% 8%;
+        p{
             margin: 4px 0;
         }
-
-        a {
+        a{
             color: $colour-white;
         }
     }
+    
+    /* -- icon footer -- */ 
     &__icons {
         display: flex;
         align-items: center;
@@ -30,6 +33,7 @@
             
     }
 }
+/*-- footer menu ajusted position top -- */
 
 .footer-menu {
     top: -60px;
