@@ -286,7 +286,7 @@ header {
 @media screen and (min-width: 992px) {
   .header-menu__img {
     width: 100%;
-    height: 100vh;
+    height: 26vh;
   }
 }
 
@@ -299,7 +299,7 @@ header {
   height: 100vh;
   background: rgb(0, 0, 0);
   opacity: 0.95;
-  animation: 0s 3s cubic-bezier(0, 1, 0, 1) delete forwards;
+  animation: delete cubic-bezier(0, 1, 0, 1) 0s 5s forwards;
 }
 .load__box {
   color: white;
@@ -320,7 +320,7 @@ header {
   top: -95px;
   font-size: 20px;
   letter-spacing: 3px;
-  animation: 1200ms cubic-bezier(0, 0.94, 0.52, 0.98) alternate infinite wait;
+  animation: 2000ms cubic-bezier(0, 0.94, 0.52, 0.98) alternate infinite wait;
 }
 .load__box__line1 {
   position: relative;
@@ -329,7 +329,7 @@ header {
   border-radius: 3px;
   top: 40px;
   background-color: #99E2D0;
-  animation: 1200ms cubic-bezier(0, 0.94, 0.52, 0.98) alternate infinite line-move;
+  animation: 2000ms cubic-bezier(0, 0.94, 0.52, 0.98) alternate infinite line-move;
 }
 .load__box__line2 {
   position: relative;
@@ -339,7 +339,7 @@ header {
   border-radius: 2px 2px 0 0;
   background-color: #99E2D0;
   border: 2px black solid;
-  animation: 1200ms cubic-bezier(0, 0.94, 0.52, 0.98) alternate infinite line-move;
+  animation: 2000ms cubic-bezier(0, 0.94, 0.52, 0.98) alternate infinite line-move;
 }
 .load__box__line3 {
   z-index: 10;
@@ -367,7 +367,7 @@ header {
   width: 5px;
   height: 6px;
   border-radius: 20px 20px 30px 30px;
-  animation: 12ms ease infinite alternate flame;
+  animation: 12ms 200ms ease infinite alternate flame;
 }
 .flame__flame {
   position: relative;
@@ -400,10 +400,10 @@ header {
 
 /* Text load */
 @keyframes wait {
-  to {
+  0% {
     transform: translate(2px, -15px);
   }
-  from {
+  100% {
     transform: translateY(1px);
   }
 }
@@ -505,6 +505,16 @@ header {
     transform: scale(1.5);
   }
 }
+/*---- Menu-offset ----*/
+@keyframes offset {
+  0% {
+    transform: translateY(8px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 nav {
   display: flex;
   flex-direction: column;
@@ -576,7 +586,7 @@ article {
     width: 25%;
     display: flex;
     justify-content: center;
-    border-bottom: 2px solid #545454;
+    border-bottom: 3px solid #99E2D0;
   }
 }
 
