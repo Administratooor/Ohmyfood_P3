@@ -230,3 +230,18 @@
         transform: scale(1.5);
     }
 }
+
+
+
+/*---- Menu-offset ----*/
+
+@keyframes offset {
+    0% {
+        transform: translateY(8px);
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+
+    }
+}
