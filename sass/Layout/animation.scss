@@ -16,6 +16,8 @@
         justify-content: center;
         height: 100vh;
         width: 100%;
+
+        /* Logo */ 
         p {
             position: relative;
             font-family: "Shrikhand";
@@ -26,6 +28,7 @@
             letter-spacing: 3px;
             animation: 2000ms cubic-bezier(0,.94,.52,.98)  alternate infinite  wait; 
             }
+
         /*--- Pan-cooking --*/ 
         &__line1 {
             position: relative;
@@ -61,7 +64,18 @@
             
         }
     }
-}  
+}
+
+
+/* --Delete loading--*/ 
+@keyframes delete {
+    to{
+        opacity: 0;
+        transform: scale(0);
+    }
+}
+
+
 /* Flames */ 
 .flame {
     position: relative;
@@ -100,6 +114,7 @@
         }  
 }    
 
+
 /* Text load */ 
 @keyframes wait {
     0% {
@@ -111,6 +126,7 @@
 }
 
 
+/* Pan-cooking */ 
 @keyframes line-move {
     0% {
         transform: rotate(-1deg);
@@ -130,6 +146,7 @@
 }
 
 
+/* Flames */ 
 @keyframes flame  {
     0% {
         transform: rotate(-1deg);
@@ -157,63 +174,47 @@
     }
 }
 
-/* --Delete loading--*/ 
-
-@keyframes delete {
-    to{
-        opacity: 0;
-        transform: scale(0);
-    }
-}
-
 
 /* heart filling */ 
 
-    .selection__block__heart {
-        position: relative;
-        .fa {
-            position: absolute;
-            color: $colour-icone;
-            &::before {
-                
+.selection__block__heart {
+    position: relative;
+    .icon-front {
+        position: absolute;
+        color: $colour-icone;
             &:hover::before {
                 opacity: 0;
                 color: transparent;
                 z-index: -1;
             }
         }
-        
-        
-        }
+     }
 
-
-
-        .fa-1 {
-            position: relative;
-            top: -1px;
-            transition: all 0.2s;
-            left: -2px;
-            &::before {
-                color: transparent;
-                width: 110%;
-                height: 0%;
-                font-size:31px;
+    /* Solid heart */ 
+    .icon-back {
+        position: relative;
+        top: -1px;
+        transition: all 0.2s;
+        left: -2px;
+        &::before {
+            color: transparent;
+            width: 110%;
+            height: 0%;
+            font-size:31px;
             }
-            &:hover::before {
-                height: 110%;
-                animation: 1000ms progress-bar linear both;
+        &:hover::before {
+            height: 110%;
+            animation: 1000ms progress-bar linear both;
             }
         }
-    }
 
 
-
+/* Heart progress */ 
 @keyframes progress-bar{
     0% {
         -webkit-background-clip: text;
         color: white;
         transform: scale(0);
-
     }
     50% {
         -webkit-background-clip: text;
@@ -229,18 +230,3 @@
         transform: scale(1.5);
     }
 }
-
-
-
-
-
-
-/*------- appear -------*/
-
-// @keyframes appear {
-//     from{
-//         transform:scale(0);
-//     }
-//     to {
-//         transform: scale(1);
-//     }
