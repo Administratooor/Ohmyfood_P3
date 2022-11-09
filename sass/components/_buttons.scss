@@ -1,11 +1,12 @@
 button {
-    background: linear-gradient(900deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%);
+    
     border: none;
     color: $colour-white;
     width: 60%;
     padding: 20px;
     margin: 30px auto 50px auto;
     border-radius: 50px;
+    background: linear-gradient(900deg, $colour-secondary 0%, $colour-primary 100%);
     @include box-shadow ($shadow-button);
     cursor: pointer;
     transition: 200ms ease;
@@ -74,13 +75,13 @@ button {
             align-items: baseline;
             width:84%;
             border-radius: 20px;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
             padding: 10px;
             background-color: $colour-header_font;
             box-shadow: $shadow-button;
         @include desktop-only {
             display: flex;
-            width: 26%;
+            width:40%;
             margin: 0 auto;
             margin-bottom: 20px;
             transition: 1s; 
@@ -138,9 +139,6 @@ button {
             margin-right: 0;
             @include desktop-only {
                 width: 100%;
-                display: flex;
-                justify-content: flex-start;
-                flex-wrap: wrap;
             }
                 &__list{
                     width: 90%;

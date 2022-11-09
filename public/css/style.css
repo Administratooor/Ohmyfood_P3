@@ -1,3 +1,18 @@
+.container__btn__menu:nth-child(1) {
+  animation: 400ms linear offset both;
+  animation-delay: 250ms;
+}
+
+.container__btn__menu:nth-child(2) {
+  animation: 400ms linear offset both;
+  animation-delay: 500ms;
+}
+
+.container__btn__menu:nth-child(3) {
+  animation: 400ms linear offset both;
+  animation-delay: 750ms;
+}
+
 body {
   margin: 0 auto;
   box-sizing: border-box;
@@ -57,13 +72,13 @@ p, button {
 }
 
 button {
-  background: linear-gradient(900deg, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 100%);
   border: none;
   color: #fff;
   width: 60%;
   padding: 20px;
   margin: 30px auto 50px auto;
   border-radius: 50px;
+  background: linear-gradient(900deg, #FF79DA 0%, #9356DC 100%);
   -webkit-box-shadow: 0px 8px 10px 1px #D1D1D1;
   -moz-box-shadow: 0px 8px 10px 1px #D1D1D1;
   box-shadow: 0px 8px 10px 1px #D1D1D1;
@@ -145,7 +160,7 @@ button span:hover {
   align-items: baseline;
   width: 84%;
   border-radius: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   padding: 10px;
   background-color: #F7F7F7;
   box-shadow: 0px 8px 10px 1px #D1D1D1;
@@ -153,7 +168,7 @@ button span:hover {
 @media screen and (min-width: 992px) {
   .container__btn__menu {
     display: flex;
-    width: 26%;
+    width: 40%;
     margin: 0 auto;
     margin-bottom: 20px;
     transition: 1s;
@@ -220,9 +235,6 @@ button span:hover {
 @media screen and (min-width: 992px) {
   .container-page-menu__text {
     width: 100%;
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
   }
 }
 .container-page-menu__text__list {
@@ -286,7 +298,7 @@ header {
 @media screen and (min-width: 992px) {
   .header-menu__img {
     width: 100%;
-    height: 100vh;
+    height: 26vh;
   }
 }
 
@@ -505,6 +517,16 @@ header {
     transform: scale(1.5);
   }
 }
+/*---- Menu-offset ----*/
+@keyframes offset {
+  0% {
+    transform: translateY(8px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 nav {
   display: flex;
   flex-direction: column;
@@ -576,7 +598,7 @@ article {
     width: 25%;
     display: flex;
     justify-content: center;
-    border-bottom: 2px solid #545454;
+    border-bottom: 3px solid #99E2D0;
   }
 }
 
@@ -715,7 +737,7 @@ article {
   .presentation-menu__title h1 {
     position: relative;
     color: rgb(0, 0, 0);
-    font-size: 70px;
+    font-size: 50px;
   }
 }
 

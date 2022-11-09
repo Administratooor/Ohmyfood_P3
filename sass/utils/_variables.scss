@@ -19,6 +19,9 @@ $font-weight-800 : 800;
 $font-primary:"Roboto";
 $font-secondary:"Shrikhand";
 
+$animation-delay:null;
+$animation:400ms linear offset both;
+
 
 $breakpoints: (
     tablette: 764px
