@@ -14,7 +14,7 @@
 
 /* -- loop container btn menu --*/ 
 
-@for $i from 1 through 3 {
+@for $i from 1 through 4 {
     .container__btn__menu:nth-child(#{+$i}) {
     animation:($animation);
     animation-delay: ($animation-delay $i * 250ms);
