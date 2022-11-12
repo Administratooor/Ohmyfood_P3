@@ -528,6 +528,21 @@ header {
     opacity: 1;
   }
 }
+/* -- Price validation -- */
+@keyframes price {
+  to {
+    padding-right: 3rem;
+  }
+}
+@keyframes translate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    margin: 0 auto;
+    transform: rotate(360deg);
+  }
+}
 nav {
   display: flex;
   flex-direction: column;
