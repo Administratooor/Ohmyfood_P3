@@ -97,13 +97,11 @@ button {
             width:84%;
             border-radius: 20px;
             margin-bottom: 30px;
-            padding: 10px;
             background-color: $colour-header_font;
             box-shadow: $shadow-button;
             cursor: pointer;
             &:hover {
                 animation-delay: 2s;
-                transform: scale(1.02);
             }
         @include desktop-only {
             width:40%;
@@ -133,10 +131,14 @@ button {
         align-items: flex-end;
         margin-right: 0;
         @include desktop-only {
-            width: 100%;
+            max-width: 100%;
         }
         &__list{
             width: 90%;
+            margin: 10px 0px 10px 15px;
+            @include mobile-only {
+                width: 50%;
+            }
             p{
                 width: 90%;
                 overflow: hidden;
@@ -157,19 +159,42 @@ button {
         }
         &__price {
             margin-right: 15px;
-            &:hover {
-                height: 100%;
-                background-color: $colour-tertiary;
-            }
-                
+            margin-bottom: 10px;
+
         }
         &__price p{
             margin:0 0 0 0;
             font-weight: bolder;
-            text-overflow:inherit;
-            &:hover {
-                background-color: $colour-tertiary;
+        }
+        &:hover {
+            .container-page-menu__validation {
+                display: flex;
+                justify-content: flex-start;
+                animation: 400ms price linear both;
             }
-        }  
+        }
     }
+
+
+    &__validation{
+        display: none;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        width: 15px;
+        height: 72px;
+        border-radius: 0 20px 20px 0;
+        background-color: #99E2D0;
+        .fa-circle-check{
+            position: relative;
+            left: 10px;
+            width: 55px;
+            height: 34px;
+            font-size: 36px;
+            background-color: #ffffff;
+            border-radius: 50%;
+            color: #99E2D0;
+            animation: 400ms translate linear both;
+        }
+    } 
 }

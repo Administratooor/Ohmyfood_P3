@@ -23,7 +23,11 @@ $animation-delay:null;
 $animation:400ms linear offset both;
 
 /*-- breakpoints -- */ 
-$breakpoints: (
+$breakpoints-mobile: (
+    mobile: 350px
+);
+
+$breakpoints-tablette: (
     tablette: 764px
 );
 $breakpoints-desktop: (
