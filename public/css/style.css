@@ -61,7 +61,7 @@ h1, h2 {
 
 h3 {
   font-weight: bolder;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 h4 {
@@ -72,7 +72,7 @@ h4 {
 
 p, button {
   font-weight: 300;
-  font-size: 1rem;
+  font-size: 0.8rem;
 }
 
 .container__btn__menu-details h3, .container__btn__menu-details p {
@@ -244,13 +244,13 @@ button span:hover {
   width: 90%;
   margin: 10px 0px 10px 15px;
 }
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 375px) {
   .container-page-menu__text__list {
-    width: 50%;
+    width: 62%;
   }
 }
 .container-page-menu__text__list p {
-  width: 90%;
+  width: 96%;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -262,7 +262,6 @@ button span:hover {
   }
 }
 .container-page-menu__text__list h3 {
-  font-size: larger;
   margin: 0;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -287,7 +286,7 @@ button span:hover {
   justify-content: center;
   overflow: hidden;
   width: 15px;
-  height: 72px;
+  height: 64px;
   border-radius: 0 20px 20px 0;
   background-color: #99E2D0;
 }

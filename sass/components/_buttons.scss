@@ -137,10 +137,10 @@ button {
             width: 90%;
             margin: 10px 0px 10px 15px;
             @include mobile-only {
-                width: 50%;
+                width: 62%;
             }
             p{
-                width: 90%;
+                width: 96%;
                 overflow: hidden;
                 text-overflow: ellipsis;
                 white-space: nowrap;
@@ -150,12 +150,12 @@ button {
                 }
             }
             h3 {
-                font-size: larger;
                 margin: 0; 
                 overflow: hidden;
                 text-overflow: ellipsis;
                 white-space: nowrap;
             }
+
         }
         &__price {
             margin-right: 15px;
@@ -182,7 +182,7 @@ button {
         justify-content: center;
         overflow: hidden;
         width: 15px;
-        height: 72px;
+        height: 64px;
         border-radius: 0 20px 20px 0;
         background-color: #99E2D0;
         .fa-circle-check{
