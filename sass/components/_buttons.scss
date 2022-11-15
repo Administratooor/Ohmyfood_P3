@@ -1,7 +1,7 @@
-button {
+.button {
     width: 60%;
     padding: 20px;
-    margin: 30px auto 50px auto;
+    margin: 30px auto;
     border: none;
     border-radius: 50px;
     color: $colour-white;
@@ -136,6 +136,7 @@ button {
         &__list{
             width: 90%;
             margin: 10px 0px 10px 15px;
+            overflow: hidden;
             @include mobile-only {
                 width: 62%;
             }
@@ -182,7 +183,7 @@ button {
         justify-content: center;
         overflow: hidden;
         width: 15px;
-        height: 64px;
+        height: 72px;
         border-radius: 0 20px 20px 0;
         background-color: #99E2D0;
         .fa-circle-check{

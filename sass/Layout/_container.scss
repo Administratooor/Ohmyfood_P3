@@ -95,6 +95,22 @@ article {
         border-radius: 20px;
         margin-bottom: 20px;
         box-shadow: 0px 8px 10px 1px #d1d1d1;
+        &:hover {
+            @include desktop-only {
+                background-color: #F7F7F7;
+                box-shadow: 0px 0px 50px 12px #000000;
+                z-index: 28;
+                transition: all 1s;
+                width: 115%;
+            }
+            .exemple-block {
+                &__text{
+                    display: inherit;
+                    padding-top: 11px;  
+                }   
+            }
+
+        }
         img {
             object-fit: cover;
             width: 100%;
@@ -113,7 +129,9 @@ article {
                 text-align: center;
                 border-radius: 5px;
                 background-color: $colour-tertiary;
-                color: white;
+                @include btn-news;
+                font-weight: 600;
+                font-size: 1.2rem;
                 }   
             }
         /* -- block text restaurants-- */     
@@ -122,7 +140,7 @@ article {
             align-items: center;
             justify-content: space-between;
             padding-right: 10px;
-            padding-left: 10px; 
+            padding-left: 10px;
             &__body {
                 display: flex;
                 flex-direction: column;
@@ -132,6 +150,11 @@ article {
                 }
                 p {
                     margin: 0 0 8px 0;
+                }
+                &__exemple-block{
+                    &__text{
+                        display: none;
+                    }
                 }
             }
         }  

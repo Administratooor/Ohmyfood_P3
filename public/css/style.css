@@ -61,7 +61,7 @@ h1, h2 {
 
 h3 {
   font-weight: bolder;
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 h4 {
@@ -72,17 +72,17 @@ h4 {
 
 p, button {
   font-weight: 300;
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 
 .container__btn__menu-details h3, .container__btn__menu-details p {
   margin: 10px 10px 0 0;
 }
 
-button {
+.button {
   width: 60%;
   padding: 20px;
-  margin: 30px auto 50px auto;
+  margin: 30px auto;
   border: none;
   border-radius: 50px;
   color: #fff;
@@ -94,22 +94,22 @@ button {
   transition: 200ms ease;
 }
 @media screen and (min-width: 764px) {
-  button {
+  .button {
     width: 40%;
   }
 }
 @media screen and (min-width: 992px) {
-  button {
+  .button {
     width: 20%;
   }
 }
-button:hover {
-  -webkit-box-shadow: 0px 8px 6px 3px #D1D1D1;
-  -moz-box-shadow: 0px 8px 6px 3px #D1D1D1;
-  box-shadow: 0px 8px 6px 3px #D1D1D1;
+.button:hover {
+  -webkit-box-shadow: 0px 15px 8px #D1D1D1;
+  -moz-box-shadow: 0px 15px 8px #D1D1D1;
+  box-shadow: 0px 15px 8px #D1D1D1;
   opacity: 0.9;
 }
-button span:hover {
+.button span:hover {
   opacity: 1;
 }
 
@@ -186,9 +186,9 @@ button span:hover {
 }
 .container__btn:hover {
   background-color: #f2eafb;
-  -webkit-box-shadow: 0px 8px 6px 3px #D1D1D1;
-  -moz-box-shadow: 0px 8px 6px 3px #D1D1D1;
-  box-shadow: 0px 8px 6px 3px #D1D1D1;
+  -webkit-box-shadow: 0px 15px 8px #D1D1D1;
+  -moz-box-shadow: 0px 15px 8px #D1D1D1;
+  box-shadow: 0px 15px 8px #D1D1D1;
 }
 .container__btn:hover .container__btn__iconspace {
   color: #9356DC;
@@ -243,6 +243,7 @@ button span:hover {
 .container-page-menu__text__list {
   width: 90%;
   margin: 10px 0px 10px 15px;
+  overflow: hidden;
 }
 @media screen and (max-width: 375px) {
   .container-page-menu__text__list {
@@ -286,7 +287,7 @@ button span:hover {
   justify-content: center;
   overflow: hidden;
   width: 15px;
-  height: 64px;
+  height: 72px;
   border-radius: 0 20px 20px 0;
   background-color: #99E2D0;
 }
@@ -326,7 +327,7 @@ header {
 @media screen and (min-width: 992px) {
   .header-menu__img {
     width: 100%;
-    height: 26vh;
+    height: 300px;
   }
 }
 
@@ -495,6 +496,7 @@ header {
 /* heart filling */
 .selection__block__heart {
   position: relative;
+  /* Solid heart */
 }
 .selection__block__heart .icon-front {
   position: absolute;
@@ -505,27 +507,20 @@ header {
   color: transparent;
   z-index: -1;
 }
-
-/* Solid heart */
-.icon-back {
+.selection__block__heart .icon-back {
   position: relative;
-  top: -1px;
-  transition: all 0.2s;
-  left: -2px;
+  margin-right: 30px;
 }
-.icon-back::before {
+.selection__block__heart .icon-back::before {
   color: transparent;
-  width: 110%;
-  height: 0%;
-  font-size: 31px;
+  font-size: 27px;
 }
-.icon-back:hover::before {
-  height: 110%;
-  animation: 1000ms progress-bar linear both;
+.selection__block__heart .icon-back:hover::before {
+  animation: 800ms progress-heart linear both;
 }
 
 /* Heart progress */
-@keyframes progress-bar {
+@keyframes progress-heart {
   0% {
     -webkit-background-clip: text;
     color: white;
@@ -568,6 +563,17 @@ header {
   100% {
     margin: 0 auto;
     transform: rotate(360deg);
+  }
+}
+@keyframes scaleMenu {
+  0% {
+    transform: scale(1) translateX(20px);
+  }
+  50% {
+    transform: translateX(-20px);
+  }
+  100% {
+    transform: scale(1.2);
   }
 }
 nav {
@@ -702,6 +708,19 @@ article {
   box-shadow: 0px 8px 10px 1px #d1d1d1;
   /* -- block text restaurants-- */
 }
+@media screen and (min-width: 992px) {
+  .selection__menu:hover {
+    background-color: #F7F7F7;
+    box-shadow: 0px 0px 50px 12px #000000;
+    z-index: 28;
+    transition: all 1s;
+    width: 115%;
+  }
+}
+.selection__menu:hover .exemple-block__text {
+  display: inherit;
+  padding-top: 11px;
+}
 .selection__menu img {
   object-fit: cover;
   width: 100%;
@@ -721,7 +740,9 @@ article {
   text-align: center;
   border-radius: 5px;
   background-color: #99E2D0;
-  color: white;
+  color: #2c9c81;
+  font-weight: 600;
+  font-size: 1.2rem;
 }
 .selection__menu__block {
   display: flex;
@@ -740,6 +761,9 @@ article {
 }
 .selection__menu__block__body p {
   margin: 0 0 8px 0;
+}
+.selection__menu__block__body__exemple-block__text {
+  display: none;
 }
 
 .presentation-menu {

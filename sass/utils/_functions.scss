@@ -5,6 +5,10 @@
     background-color : $colour;
 }
 
+@mixin btn-news($colour: $colour-tertiary){
+    color : darken($color: $colour, $amount: 35%)
+}
+
 
 @mixin box-shadow($params) {
     -webkit-box-shadow: $params;

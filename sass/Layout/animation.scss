@@ -188,29 +188,24 @@
                 z-index: -1;
             }
         }
-     }
+     
 
     /* Solid heart */ 
     .icon-back {
         position: relative;
-        top: -1px;
-        transition: all 0.2s;
-        left: -2px;
+        margin-right:30px ;
         &::before {
             color: transparent;
-            width: 110%;
-            height: 0%;
-            font-size:31px;
+            font-size:27px;
             }
         &:hover::before {
-            height: 110%;
-            animation: 1000ms progress-bar linear both;
+            animation: 800ms progress-heart linear both;
             }
         }
-
+    }
 
 /* Heart progress */ 
-@keyframes progress-bar{
+@keyframes progress-heart{
     0% {
         -webkit-background-clip: text;
         color: white;
@@ -263,5 +258,17 @@
     100% {
         margin: 0 auto;
         transform:rotate(360deg);
+    }
+}
+
+@keyframes scaleMenu {
+    0% {
+        transform: scale(1) translateX(20px);
+    }
+    50% {
+        transform: translateX(-20px);
+    }
+    100% {
+       transform:scale(1.2)  ;
     }
 }
