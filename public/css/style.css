@@ -346,6 +346,10 @@ header {
   }
 }
 
+.img-size {
+  height: 270px;
+}
+
 /* Page-loading */
 .load {
   z-index: 1;
