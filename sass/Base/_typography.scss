@@ -7,11 +7,14 @@ input {
 h1 ,h2 {
     font-weight:bolder;
     font-size: 1.5rem;
+    @include mobile-only {
+        font-size: 1.2rem;
+    }
 }
 
 h3 {
     font-weight: bolder;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }
 
 h4 {

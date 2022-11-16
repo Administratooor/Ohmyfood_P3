@@ -272,3 +272,23 @@
        transform:scale(1.2)  ;
     }
 }
+
+/* -- selection menu exemple apparition -- */ 
+
+
+@keyframes apparition-proposition {
+    0% {
+        transform: translateX(0px);
+    }
+    25% {
+        transform: translateX(-150px);
+    }
+
+    75% {
+        transform:translateX(150px);
+    }
+
+    100%{
+        transform: translateX(0);
+    }
+}
